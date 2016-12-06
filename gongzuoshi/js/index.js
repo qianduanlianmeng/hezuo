@@ -316,7 +316,7 @@ function testPhone(phone){
 }
 //QQ号验证
 function testqq(qq){
-    if(/^1[34578]\d{9}$/.test(qq)){
+    if(/^[1-9][0-9]{4,10}$/.test(qq)){
         $("result-qq").innerHTML="QQ号正确";
         $("result-qq").style.color="#81b950";
         $("qq").className="right";
@@ -359,58 +359,4 @@ var ajaxButton = $("#submit"),
 }
 
 
-    
-// })
-// var names= document.querySelector('#names');
-//     var showInfor = document.getElementsByName('addr-infor')
-//     names.addEventListener('click',function{
-//         showAddr.style.display='block';
-
-
-// var addressClass = ['t-eight', 'eighty', 's-f-suqaure', 't-two', 'wind-rain', 'red-house', 'old-lib', 'lover', 'taiji', 'basketball', 'new-gate', 'xinke', 'yifulou'];
-
-// function showAddr() {
-
-//     var ChineseName = ['八教', '八十万', '春华秋实广场', '二教', '风雨', '红房子', '老图', '情人坡', '太极', '五栋篮球场', '新校门', '信科', '逸夫楼'];
-
-//     var mapContainer = document.querySelector('.map-wrapper');
-//     var addrName = document.querySelector('.addr-name');
-//     var addInforCons = document.querySelectorAll('.addr-infor');
-
-//     function showInfor(index) {
-//         var that = addInforCons[index];
-//         that.style.display = 'block';
-//         var el = that.querySelector('.images');
-//         rotate(el);
-
-//         var closeBtn = that.querySelector('.close-btn');
-//         closeBtn.addEventListener('click',
-//             function() {
-//                 this.parentNode.parentNode.style.display = 'none';
-//             });
-//     }
-
-//     mapContainer.addEventListener('mouseover',
-//         function(ev) {
-//             var target = ev.target;
-//             if (target.className === 'map-img') {
-//                 var top = window.getComputedStyle(target.parentNode).top;
-//                 var left = window.getComputedStyle(target.parentNode).left;
-//                 top = parseFloat(top) - 40;
-//                 left = parseFloat(left) - 16;
-//                 addrName.style.top = top + 'px';
-//                 addrName.style.left = left + 'px';
-//                 var targetClass = target.parentNode.className.slice(5);
-//                 var nameIndex = addressClass.indexOf(targetClass);
-//                 addrName.innerHTML = ChineseName[nameIndex];
-
-//                 target.addEventListener('click',
-//                     function() {
-//                         showInfor(nameIndex);
-//                     },
-//                     false);
-//             }
-//         },
-//         false);
-// };
-//showAddr();
+   
