@@ -2,12 +2,12 @@ window.onload = function(){
 var fades = document.getElementById("ss");
 var balck=document.getElementById("who");
 var blink = document.getElementsByTagName("body")
-balck.addEventListener("mouseover",function(){
-    fades.style.display="block";
-});
-balck.addEventListener("mouseout",function(){
-    fades.style.display="none";
-});
+// balck.addEventListener("mouseover",function(){
+//     fades.style.display="block";
+// });
+// balck.addEventListener("mouseout",function(){
+//     fades.style.display="none";
+// });
 // var names= document.querySelector('#names');
 //     var showss = document.getElementsByName('addr-infor')
 //     names.addEventListener('click',function{
@@ -28,7 +28,12 @@ function qswhMarquee(){
     }
 }
 
-inter=setInterval(qswhMarquee,500); 
+inter=setInterval(qswhMarquee,500);
+
+ var oDiv =document.getElementById('laterW');
+    oDiv.onclick=function(){
+        scrollTo(0,2000);  
+    }
 // function qs(){
     
 //         if(balck.style.display==""){
@@ -48,7 +53,41 @@ inter=setInterval(qswhMarquee,500);
 //      {duration: 500,easing: "swing"});
 //         return false;
 
+//showinfor=document.querySelector('.show-infor');
 
+$(function(){ 
+    $("#who").click(function(){ 
+        $.scrollTo('#each_who',500); 
+    }); 
+    $("#what").click(function(){ 
+        $.scrollTo('#each_what',800); 
+    }); 
+    $("#which").click(function(){ 
+        $.scrollTo('#each_which',1000); 
+    }); 
+    $("#how").click(function(){ 
+        $.scrollTo('#each_how',1200); 
+    }); 
+    
+}); 
+
+document.querySelector('.names').onmouseover = function () {
+       document.querySelector('.show-infor').style.display = 'block';
+       
+       
+    };
+document.querySelector('.names').onmouseout = function () {
+        document.querySelector('.show-infor').style.display = 'none';      
+      
+    }
+var names = document.querySelectorAll('.names');
+var introduces = document.querySelector('introduces');
+parent.addEventListener('mouseover', function(ev){
+    var target = ev.target
+    if(target.className.toLowerCase() == "show-infor"){
+    target.style.display="block";
+    }
+  });    
 
 
 function show(){
@@ -210,6 +249,10 @@ function show(){
     function $(id){
     return document.getElementById(id);
 }
+
+
+
+
 $("form").addEventListener("click",function(e){
     var id=e.target.id;
     switch(id){

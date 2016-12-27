@@ -75,6 +75,10 @@ anim_fade_image:hover, .anim_fade_image_hover {
 	background-color: #000;
 	margin-right: 256px;
 	float: left; 
+	-webkit-transition: -webkit-transform 1s;
+}
+.black:hover {
+-webkit-transform: rotate(360deg);
 }
 #who{
 	/*margin-left: 85px;*/
@@ -123,6 +127,10 @@ p{
 	background-color: #E8E8FF;
 	/*background-color: #B92672;*/
 	line-height: 128px;
+	-webkit-transition: -webkit-transform 1s;
+}
+.each_W:hover {
+-webkit-transform: rotate(360deg);
 }
 #each_who{
 	height: 90px;
@@ -315,33 +323,32 @@ p{
 	float: left;
 	/*background-color: #fff000;*/
 }
-#names{
+
+.names{
 	width: 60px;
-	height: 200px;
-	line-height: 200px;
+	height: 140px;
+	line-height: 140px;
 	color:#fff;
 	float: left;
-	
 	/*margin-top: 50px;
 	margin-left: -530px;*/
 	float: left;
 }
+.show-infor{
+	display: none;
+}
 .addr-infor {
-    display: none;
-   
-    /*top: 90px;
-    left: 260px;*/
     width: 160px;
-    height: 200px;
-    margin-left: 60px;
-    color: #000;
-   /* margin-left: 60px;*/
-    /*float: left;*/
-    /*float: left;*/
-    /*border-radius: 10px;*/
-    background-color: #fff;
-    /*z-index: 11;*/
+    height: 140px;
+    margin-top: 20px;
+    margin-left: 0px;
+    float: left;
+    color:#fff;
+	background-color: rgba(0,0,0,0.1);
     font-family: '微软雅黑';
+}
+.introduces:hover.show-infor{
+	display: block;
 }
 .worldd{
 	display: block;
@@ -350,41 +357,15 @@ p{
 	float: left;
 	font-size: 10px;
 	text-align: left;
-	color: #000;
+	color: #fff;
+	
 	margin: 0;
 	padding: 0;
 	
 }
-/*.addr-con {
-    position: relative;
-    width: 1028px;
-    height: 630px;
+#hh{
+	margin: 60px;
 }
-
-.addr-infor .carousel {
-    margin: 25px;
-    width: 466px;
-    height: 190px;
-}
-
-.addr-infor .name {
-    width: 518px;
-    height: 25px;
-    font-size: 18px;
-    font-weight: 400;
-    text-align: center;
-    letter-spacing: 1px;
-    opacity: 0.8;
-}
-
-.addr-infor .infor {
-    margin-left: 25px;
-    width: 466px;
-    font-size: 12px;
-    line-height: 25px;
-    letter-spacing: 1px;
-    opacity: 0.8;
-}*/
 
 
 
@@ -432,9 +413,16 @@ p{
 	border-radius: 50%;
 	background-color: #fff000;
 }
+.trans-rotate{
+    -webkit-transition: transform 1s linear;
+    -moz-transition: transform 1s linear;
+    -o-transition: transform 1s linear;
+    transition: transform 1s linear;
+}
 #qianlogo{
 	background-color: #96D7DB;
 }
+#qianlogo:hover{transform:rotate(180deg);}
 #houlogo{
 	background-color: #8D7BB5;
 }
@@ -460,6 +448,7 @@ p{
 	background-image: url(../image/starone.jpg);
 	background-size: 100% 100%;
 }
+#photo_yun:hover{transform:rotate(180deg);}
 .bigchinese{
 	width: 200px;
 	margin-top: 160px;
@@ -686,3 +675,7 @@ p{
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
+
